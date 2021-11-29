@@ -1,0 +1,21 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Metro @key(fields: "id"){
+  id: ID!
+  display_name: String!
+}
+
+type Query {
+  metro: [Metro!]!
+}
+
+input addMetro {
+  id: ID!
+  display_name: String!
+}
+
+type Mutation {
+  addMetro(input: addMetro!) : [Metro!]!
+}

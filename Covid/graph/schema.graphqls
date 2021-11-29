@@ -1,0 +1,18 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Covid @key(fields: "date"){
+  dailyconfirmed: String,
+  dailydeceased: String,
+  dailyrecovered: String,
+  date: String,
+  dateymd: String,
+  totalconfirmed: String,
+  totaldeceased: String,
+  totalrecovered: String
+}
+
+type Query {
+  covid: [Covid]
+}
