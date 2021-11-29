@@ -1,0 +1,12 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Route @key(fields:"id"){
+  display_name: String
+  id: ID
+}
+
+type Query {
+  route(id: Int=10): [Route]
+}
