@@ -211,7 +211,7 @@ type Route @key(fields:"id"){
 }
 
 type Query {
-  route(id: Int=10): [Route]
+  route(id: Int): [Route]
 }`, BuiltIn: false},
 	{Name: "federation/directives.graphql", Input: `
 scalar _Any

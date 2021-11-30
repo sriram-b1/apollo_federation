@@ -32,10 +32,6 @@ func (r *queryResolver) Metro(ctx context.Context) ([]*model.Metro, error) {
 
 	var routes JsonData
 	json.Unmarshal(responseData, &routes)
-	for _, item := range routes.Items {
-		it := &model.Metro{ID: item.ID, DisplayName: item.DisplayName}
-		fmt.Print("Item: ", it)
-	}
 
 	return routes.Items, nil
 }
